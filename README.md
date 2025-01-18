@@ -45,5 +45,6 @@ senha: 123456
 - Testes feitos com o unittest, para rodar os testes:
 - listar os containers ``docker ps``
 - entre dentro do container, ``docker exec -it 8a389fd6b2c2 /bin/bash`` e rode: ``python manage.py test``
-
+- Utilizado pré commit para melhor qualidade do sistema
+- Utilizado Black, Flake8, Isort
 Qualquer dúvida estou à disposição no e-mail: danilocastelhano@hotmail.com
