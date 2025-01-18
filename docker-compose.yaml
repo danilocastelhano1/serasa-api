@@ -1,0 +1,36 @@
+services:
+  db:
+    container_name: postgres_db
+    image: postgres:alpine
+    env_file:
+      - ./.env
+    volumes:
+      - db_data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 3s
+      timeout: 5s
+      retries: 20
+
+  api:
+    container_name: api_serasa
+    build:
+      context: .
+    command:
+      ["./start.sh",]
+    volumes:
+      - .:/api
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./.env
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db_data:

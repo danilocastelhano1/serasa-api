@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "47453280-23d1-4fa7-8998-61d83b53ae32",
+		"name": "Serasa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19802373"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf_cnpj\": \"228.547.730-98\",\r\n    \"name\": \"João da Silva\",\r\n    \"farm\":{\r\n        \"name\":\"Fazenda Boa Esperança\"\r\n    },\r\n    \"city\": \"Sorriso\",\r\n    \"state\": \"MT\",\r\n    \"total_area\": 1000.5,\r\n    \"agricultural_area\": 800.0,\r\n    \"vegetation_area\": 200.5,\r\n    \"seasons\": [\r\n        {\r\n            \"year\": 2021,\r\n            \"cultures\": [\r\n                {\r\n                    \"name\": \"Soja\"\r\n                },\r\n                {\r\n                    \"name\": \"Milho\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"year\": 2022,\r\n            \"cultures\": [\r\n                {\r\n                    \"name\": \"Café\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/productor/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"productor",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf_cnpj\": \"228.547.730-98\",\r\n    \"name\": \"João da Silva\",\r\n    \"farm_name\": \"Fazenda Boa Esperança\",\r\n    \"city\": \"Sorriso\",\r\n    \"state\": \"MT\",\r\n    \"total_area\": 1000.5,\r\n    \"agricultural_area\": 800.0,\r\n    \"vegetation_area\": 200.5,\r\n    \"seasons\": [\r\n        {\r\n            \"year\": 2021,\r\n            \"cultures\": [\r\n                {\r\n                    \"name\": \"Soja\"\r\n                },\r\n                {\r\n                    \"name\": \"Milho\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"year\": 2022,\r\n            \"cultures\": [\r\n                {\r\n                    \"name\": \"Abobrinha\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/productor/220bea26-bdc3-4175-b2ca-a4107349f665/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"productor",
+						"220bea26-bdc3-4175-b2ca-a4107349f665",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/productor/220bea26-bdc3-4175-b2ca-a4107349f665/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"productor",
+						"220bea26-bdc3-4175-b2ca-a4107349f665",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/productor/220bea26-bdc3-4175-b2ca-a4107349f665/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"productor",
+						"220bea26-bdc3-4175-b2ca-a4107349f665",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/productor/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"productor",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
