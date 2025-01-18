@@ -27,6 +27,54 @@ backend-app-1  | Quit the server with CONTROL-C.
 ```Serasa.postman_collection.json```
 Só importar dentro do postman.
 
+### Crud de Produtores Rurais, considerar esse body para POST/PUT
+POST - /api/productor/
+
+LIST - /api/productor/
+
+PUT - /api/productor/{productor_id}/
+
+RETRIEVE - /api/productor/{productor_id}/
+
+DELETE - /api/productor/{productor_id}/
+
+Exemplo de um body POST/PUT
+```json
+{
+    "cpf_cnpj": "str",
+    "name": "str",
+    "farm":{
+        "name":"str"
+    },
+    "city": "str",
+    "state": "str",
+    "total_area": 0,
+    "agricultural_area": 0,
+    "vegetation_area": 0,
+    "seasons": [
+        {
+            "year": 2021,
+            "cultures": [
+                {
+                    "name": "str"
+                },
+                {
+                    "name": "str"
+                }
+            ]
+        },
+        {
+            "year": 2022,
+            "cultures": [
+                {
+                    "name": "str"
+                }
+            ]
+        }
+    ]
+}
+```
+
 ### Acessando o Django Admin
 [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
 
